@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; connect-src 'self' https://gateway.dytth.xyz; object-src 'none'; base-uri 'self'; form-action 'none';">
+  <title>âm thanh cũ</title>
+  <meta name="description" content="Trang web thư giãn và tập trung thuần Việt với tiếng mưa hoài niệm bên khung cửa sổ Hồ Gươm và những thanh âm đời sống quen thuộc.">
+  <meta name="author" content="Vũ Tuấn Mạnh (dytth)">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://amthanhcu.dytth.xyz/">
+
+  <!-- Open Graph / Meta (Facebook, Threads, Instagram, Zalo, LinkedIn) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://amthanhcu.dytth.xyz/">
+  <meta property="og:site_name" content="âm thanh cũ.">
+  <meta property="og:title" content="âm thanh cũ">
+  <meta property="og:description" content="Trang web thư giãn và tập trung thuần Việt với tiếng mưa hoài niệm bên khung cửa sổ Hồ Gươm và những thanh âm đời sống quen thuộc.">
+  <meta property="og:image" content="https://amthanhcu.dytth.xyz/og-image.png">
+  <meta property="og:image:secure_url" content="https://amthanhcu.dytth.xyz/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Logo âm thanh cũ">
+  <meta property="og:locale" content="vi_VN">
+
+  <!-- X (formerly Twitter) -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://amthanhcu.dytth.xyz/">
+  <meta name="twitter:title" content="âm thanh cũ">
+  <meta name="twitter:description" content="Trang web thư giãn và tập trung thuần Việt với tiếng mưa hoài niệm bên khung cửa sổ Hồ Gươm và những thanh âm đời sống quen thuộc.">
+  <meta name="twitter:image" content="https://amthanhcu.dytth.xyz/og-image.png">
+  <meta name="twitter:image:alt" content="Logo âm thanh cũ">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@700&family=Charm:wght@700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+</head>
+<body>
+
+  <!-- Khung cửa kính nhìn ra Hồ Hoàn Kiếm & Canvas mưa -->
+  <div class="rain-backdrop"></div>
+  <canvas id="rainCanvas" class="rain-canvas"></canvas>
+  <div class="rain-ambience"></div>
+
+  <!-- Header with Brand Logo -->
+  <header class="app-header">
+    <div class="logo-container">
+      <span class="logo-prefix">âm thanh</span>
+      <span class="logo-accent">cũ</span>
+      <span class="logo-period">.</span>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="sound-groups">
+
+      <!-- Nhóm 1: Thiên nhiên -->
+      <section class="group-section">
+        <h2 class="group-title">Thiên nhiên</h2>
+        <div class="btn-grid">
+          <button class="sound-btn" data-id="mua-rao">Mưa rào</button>
+          <button class="sound-btn" data-id="mua-maiton">Mưa trên mái tôn</button>
+          <button class="sound-btn" data-id="mua-tauchuoi">Mưa tàu lá chuối</button>
+          <button class="sound-btn" data-id="mua-phun">Mưa phùn</button>
+          <button class="sound-btn" data-id="sam-chop">Sấm chớp</button>
+          <button class="sound-btn" data-id="coc-nhai">Cóc nhái</button>
+          <button class="sound-btn" data-id="gio-rangtre">Gió rặng tre</button>
+          <button class="sound-btn" data-id="demen-demhe">Dế mèn đêm hè</button>
+          <button class="sound-btn" data-id="vesau-truahe">Ve sầu trưa hè</button>
+          <button class="sound-btn" data-id="suoi-nho">Suối nhỏ</button>
+        </div>
+      </section>
+
+      <!-- Nhóm 2: Giảng đường -->
+      <section class="group-section">
+        <h2 class="group-title">Giảng đường</h2>
+        <div class="btn-grid">
+          <button class="sound-btn" data-id="triet-hoc">Triết học</button>
+          <button class="sound-btn" data-id="toan-hoc">Toán học</button>
+          <button class="sound-btn" data-id="vat-ly">Vật lý</button>
+          <button class="sound-btn" data-id="hoa-hoc">Hóa học</button>
+          <button class="sound-btn" data-id="ngu-van">Ngữ văn</button>
+          <button class="sound-btn" data-id="sinh-hoc">Sinh học</button>
+          <button class="sound-btn" data-id="lich-su">Lịch sử</button>
+          <button class="sound-btn" data-id="dia-ly">Địa lý</button>
+        </div>
+      </section>
+
+      <!-- Nhóm 3: Tiếng phố -->
+      <section class="group-section">
+        <h2 class="group-title">Tiếng phố</h2>
+        <div class="btn-grid">
+          <button class="sound-btn" data-id="rao-banhmi">Tiếng rao bánh mì</button>
+          <button class="sound-btn" data-id="rao-banhgio">Tiếng rao bánh giò</button>
+          <button class="sound-btn" data-id="rao-xoicuc">Tiếng rao xôi cúc</button>
+          <button class="sound-btn" data-id="chuong-xekem">Tiếng chuông xe kem</button>
+          <button class="sound-btn" data-id="rao-bapnuong">Tiếng rao khoai nướng</button>
+          <button class="sound-btn" data-id="rao-dongnat">Tiếng rao đồng nát</button>
+          <button class="sound-btn" data-id="rao-maidao">Tiếng rao mài dao kéo</button>
+          <button class="sound-btn" data-id="rao-tauhu">Tiếng rao tàu hủ nóng</button>
+          <button class="sound-btn" data-id="rao-keokeo">Tiếng rao kẹo kéo</button>
+          <button class="sound-btn" data-id="rao-bapnau">Tiếng rao bắp nấu</button>
+          <button class="sound-btn" data-id="rao-banhtieu">Tiếng rao bánh tiêu</button>
+          <button class="sound-btn" data-id="rao-banche">Tiếng rao bán chè</button>
+          <button class="sound-btn" data-id="rao-vechai">Tiếng rao ve chai</button>
+          <button class="sound-btn" data-id="rao-banchoi">Tiếng rao bán chổi</button>
+          <button class="sound-btn" data-id="rao-dambop">Đấm bóp giác hơi</button>
+          <button class="sound-btn" data-id="rao-suabinhthuy">Sửa đổi bình thủy</button>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="app-footer">
+    <div class="footer-links">
+      <a href="/dieu-khoan-su-dung" class="footer-link">Điều khoản sử dụng</a>
+      <span class="link-dot">•</span>
+      <a href="/chinh-sach-bao-mat" class="footer-link">Chính sách bảo mật</a>
+      <span class="link-dot">•</span>
+      <a href="/nguon-ban-ghi" class="footer-link">Nguồn bản ghi</a>
+    </div>
+
+    <a href="https://dytth.is-a.dev" target="_blank" rel="noopener noreferrer" class="badge-author" title="Truy cập dytth.is-a.dev">
+      built by <strong>dytth_young</strong>
+    </a>
+  </footer>
+
+  <script src="js/vendor/raindrop-fx.js"></script>
+  <script src="js/rain-canvas.js"></script>
+  <script src="js/app.js?v=20261021-1"></script>
+  <script src="js/tracker.js?v=20261021-2" defer></script>
+</body>
+</html>

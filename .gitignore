@@ -1,0 +1,16 @@
+node_modules/
+.DS_Store
+Thumbs.db
+
+# Internal copyright/permission tracking. Contains private contact details.
+SOURCES.md
+
+# Local secrets and temporary files
+.env
+.env.*
+!.env.example
+*.secret
+*.key
+*.pem
+*.log
+tmp/
